@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Certifica Agro - Serviços em Fruticultura e Citricultura</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f4f9f4;
+      color: #2c3e50;
+    }
+    header {
+      background: #2e7d32;
+      color: white;
+      padding: 20px 15px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    nav {
+      background: #1b5e20;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 20px;
+      background: #e8f5e9;
+    }
+    .hero img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    main {
+      max-width: 900px;
+      margin: 25px auto;
+      padding: 0 15px;
+    }
+    section {
+      margin-bottom: 40px;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    section h2 {
+      color: #2e7d32;
+      margin-bottom: 15px;
+    }
+    /* Contato */
+    .contact-info a {
+      display: inline-block;
+      margin-right: 20px;
+      color: #1b5e20;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+    /* Previsão do tempo */
+    #weather {
+      font-size: 1.1rem;
+    }
+    /* Doenças */
+    ul.doencas {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+    footer {
+      background: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      font-size: 0.9rem;
+    }
+
+    /* Responsivo */
+    @media (max-width: 640px) {
+      .hero {
+        flex-direction: column;
+        align-items: center;
+      }
+      .hero img {
+        width: 90%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Certifica Agro</h1>
+  <p>Serviços especializados em Fruticultura e Citricultura - Mato Grosso do Sul</p>
+</header>
+
+<nav>
+  <a href="#sobre">Sobre</a>
+  <a href="#doencas">Doenças dos Citros</a>
+  <a href="#contato">Contato</a>
+  <a href="#tempo">Previsão do Tempo</a>
+</nav>
+
+<section class="hero" aria-label="Imagens de plantações de frutas e citros">
+  <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=400&q=80" alt="Plantação de citros com laranjas maduras" />
+  <img src="https://images.unsplash.com/photo-1542736667-069246bdbc96?auto=format&fit=crop&w=400&q=80" alt="Campo de frutas variadas" />
+  <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Frutas cítricas colhidas" />
+</section>
+
+<main>
+  <section id="sobre" aria-labelledby="sobre-title">
+    <h2 id="sobre-title">Sobre a Certifica Agro</h2>
+    <p>A <strong>Certifica Agro</strong> é uma empresa que presta serviços especializados no setor agrícola, com foco na <strong>fruticultura</strong> e, principalmente, na <strong>citricultura</strong>. Atuamos no estado do Mato Grosso do Sul, oferecendo serviços de certificação fitossanitária para propriedades rurais e packing houses.</p>
+    <p>Nosso público-alvo são produtores rurais e empresas do setor, garantindo a saúde das plantações e a qualidade dos frutos por meio de diagnósticos precisos e certificação técnica adequada.</p>
+  </section>
+
+  <section id="doencas" aria-labelledby="doencas-title">
+    <h2 id="doencas-title">Principais Doenças dos Citros</h2>
+    <p>Conheça as principais doenças que afetam os citros e que monitoramos para proteger sua plantação:</p>
+    <ul class="doencas">
+      <li><strong>Greening (Huanglongbing - HLB):</strong> Doença causada por bactérias, transmitida por insetos vetores, que causa amarelecimento das folhas e frutos deformados.</li>
+      <li><strong>Cancro Cítrico:</strong> Doença bacteriana que provoca lesões nas folhas, galhos e frutos, afetando a produção.</li>
+      <li><strong>Pinta Preta:</strong> Doença fúngica que causa manchas pretas nas folhas e frutos, reduzindo a qualidade.</li>
+      <li><strong>Oídio:</strong> Fungos que geram um pó branco na superfície das folhas, diminuindo a fotossíntese.</li>
+      <li><strong>Podridão Parda:</strong> Infecção fúngica que provoca apodrecimento dos frutos após a colheita.</li>
+    </ul>
+  </section>
+
+  <section id="tempo" aria-labelledby="tempo-title">
+    <h2 id="tempo-title">Previsão do Tempo para Mato Grosso do Sul</h2>
+    <div id="weather">
+      <p>Carregando dados do tempo...</p>
+    </div>
+  </section>
+
+  <section id="contato" aria-labelledby="contato-title">
+    <h2 id="contato-title">Contato</h2>
+    <p>Entre em contato conosco para mais informações ou para agendar uma visita técnica:</p>
+    <div class="contact-info">
+      <p><a href="https://wa.me/5567999091250" target="_blank" rel="noopener noreferrer">WhatsApp: (67) 99909-1250</a></p>
+      <p><a href="mailto:certificagro@certificagro.com.br">Email: certificagro@certificagro.com.br</a></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 Certifica Agro - Todos os direitos reservados</p>
+</footer>
+
+<script>
+  // Previsão do tempo usando OpenWeatherMap API
+  // Você precisa criar uma conta em https://openweathermap.org/ e obter uma chave API gratuita
+  const apiKey = 'SUA_API_KEY_AQUI';  // <--- Coloque aqui sua chave API
+  const weatherDiv = document.getElementById('weather');
+
+  async function fetchWeather() {
+    const city = 'Campo Grande, BR';  // Capital de MS
+    try {
+      const response = await fetch(
+        `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${apiKey}&units=metric&lang=pt_br`
+      );
+      if (!response.ok) {
+        throw new Error('Erro ao obter dados do tempo');
+      }
+      const data = await response.json();
+      const temp = data.main.temp.toFixed(1);
+      const description = data.weather[0].description;
+      const humidity = data.main.humidity;
+      const wind = data.wind.speed;
+      const iconCode = data.weather[0].icon;
+      const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+
+      weatherDiv.innerHTML = `
+        <p><strong>${city}</strong></p>
+        <img src="${iconUrl}" alt="${description}" />
+        <p>Temperatura: ${temp} °C</p>
+        <p>Condição: ${description}</p>
+        <p>Umidade: ${humidity}%</p>
+        <p>Vento: ${wind} m/s</p>
+      `;
+    } catch (error) {
+      weatherDiv.innerHTML = `<p>Não foi possível carregar a previsão do tempo no momento.</p>`;
+      console.error(error);
+    }
+  }
+
+  fetchWeather();
+</script>
+
+</body>
+</html>
